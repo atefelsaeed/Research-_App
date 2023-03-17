@@ -1,0 +1,45 @@
+name: research_app
+description: A new Flutter application.
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.18.4 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  webview_flutter: ^4.0.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/fonts/
+
+
+  fonts:
+    - family: Somar
+      fonts:
+        - asset: assets/fonts/somar-bold.otf
+          weight: 700
+        - asset: assets/fonts/somar-semibold.otf
+          weight: 600
+        - asset: assets/fonts/somar-medium.otf
+          weight: 500
+        - asset: assets/fonts/somar-regular.otf
+          weight: 400
