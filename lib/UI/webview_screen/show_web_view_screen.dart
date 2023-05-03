@@ -55,18 +55,30 @@ class ShowWebViewScreen extends StatelessWidget {
         ),
       )
       ..loadRequest(Uri.parse(url));
-    return Scaffold(
-      // appBar: AppBar(
-      //   centerTitle: true,
-      //   backgroundColor: Colors.white,
-      //   elevation: 0,
-      //   iconTheme:  IconThemeData(color: ColorManager.primaryColor),
-      //   // title:  const CustomImage(
-      //   //   url: AssetRoute.LogoHorizontal,
-      //   //   height: 40,
-      //   // ),
-      // ),
-      body: WebViewWidget(controller: webViewController),
+    return WillPopScope(
+      onWillPop: () async{
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) =>
+                ShowWebViewScreen(url: 'https://rs.tkamol.sa/public/research'),
+          ),
+        );
+        return true;
+      },
+      child: Scaffold(
+        // appBar: AppBar(
+        //   centerTitle: true,
+        //   backgroundColor: Colors.white,
+        //   elevation: 0,
+        //   iconTheme:  IconThemeData(color: ColorManager.primaryColor),
+        //   // title:  const CustomImage(
+        //   //   url: AssetRoute.LogoHorizontal,
+        //   //   height: 40,
+        //   // ),
+        // ),
+        body: SafeArea(child: WebViewWidget(controller: webViewController)),
+      ),
     );
   }
 }
