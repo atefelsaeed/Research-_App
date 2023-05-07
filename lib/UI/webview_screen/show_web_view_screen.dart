@@ -177,7 +177,7 @@ class ShowWebViewScreen extends StatelessWidget {
           context,
           MaterialPageRoute(
             builder: (context) =>
-                ShowWebViewScreen(url: 'https://researchv2.tkamol.sa/public/'),
+                ShowWebViewScreen(url: 'https://rs.tkamol.sa/public/research'),
           ),
         );
         return true;
